@@ -1,7 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { 
-  ChevronLeft, 
   CheckCircle2, 
   Zap, 
   Activity, 
@@ -14,6 +13,7 @@ import {
 } from "lucide-react";
 import PostImg1 from "../img/postrehab.jpeg";
 import PostImg2 from "../img/postrehab2.jpeg";
+import BackButton from "./BackButton";
 
 const ease = [0.22, 1, 0.36, 1];
 
@@ -28,7 +28,6 @@ const itemUp = {
 };
 
 export default function PostRehab() {
-  const navigate = useNavigate();
   const { scrollYProgress } = useScroll();
   const y1 = useTransform(scrollYProgress, [0, 1], [0, -80]);
   const y2 = useTransform(scrollYProgress, [0, 1], [0, 80]);
@@ -73,30 +72,8 @@ export default function PostRehab() {
     }
   ];
 
-  const handleBack = () => {
-    if (window.history.length > 1) navigate(-1);
-    else navigate("/");
-  };
-
   return (
     <div className="bg-white text-slate-900 font-['Inter'] overflow-x-hidden selection:bg-[#C1121F] selection:text-white">
-      
-      {/* ✅ BACK BUTTON (fixed + header safe) */}
-      <div className="fixed left-4 sm:left-6 top-24 sm:top-28 z-[60]">
-        <button
-          onClick={handleBack}
-          className="group flex items-center gap-2 bg-white/85 backdrop-blur-xl border border-slate-200 px-3.5 py-2.5 rounded-2xl shadow-lg shadow-black/5 hover:border-[#C1121F]/30 transition"
-          aria-label="Go back"
-        >
-          <span className="w-9 h-9 rounded-xl bg-slate-900 text-white flex items-center justify-center group-hover:bg-[#C1121F] transition-colors">
-            <ChevronLeft className="w-5 h-5" />
-          </span>
-          <span className="text-[11px] font-['Poppins'] font-extrabold uppercase tracking-[0.18em] text-slate-900">
-            Back
-          </span>
-        </button>
-      </div>
-
       {/* 🚀 HERO */}
       <section className="relative pt-24 lg:pt-28 pb-14 lg:pb-18 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#F8FAFC] via-white to-white -z-10" />
@@ -104,6 +81,7 @@ export default function PostRehab() {
         <motion.div style={{ y: y2 }} className="absolute -bottom-24 -left-24 w-[520px] h-[520px] bg-[#FACC15]/8 rounded-full blur-[120px] -z-10" />
 
         <div className="mx-auto max-w-7xl px-6">
+          <BackButton />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             {/* Left Content */}
             <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.35 }} className="relative z-10">
