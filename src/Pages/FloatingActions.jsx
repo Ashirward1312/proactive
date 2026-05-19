@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 const WA_NUMBER = "918085354646";
-const INSTAGRAM = "https://www.instagram.com/proactivephysiotherapy";
+const INSTAGRAM = "https://www.instagram.com/proactive_physiotherapy/?hl=en";
 
 /**
  * FloatingActions — always visible, fixed bottom-right action buttons.

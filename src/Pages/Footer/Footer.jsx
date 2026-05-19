@@ -10,7 +10,7 @@ import { FaInstagram, FaWhatsapp, FaFacebookF } from "react-icons/fa";
 
 // ── Real clinic data ─────────────────────────────────────────────
 const WA_NUMBER  = "918085354646";
-const INSTAGRAM  = "https://www.instagram.com/proactivephysiotherapy";
+const INSTAGRAM  = "https://www.instagram.com/proactive_physiotherapy/?hl=en";
 const ADDRESS    = "LIG-68, Aashirwad, Sector-2, Shankar Nagar, Raipur, Chhattisgarh";
 
 export default function Footer() {

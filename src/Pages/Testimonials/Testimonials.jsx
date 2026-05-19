@@ -4,25 +4,22 @@ import { Star, Quote } from "lucide-react";
 export default function Testimonials() {
   const reviews = [
     {
-      name: "Sarah Johnson",
-      role: "Professional Athlete",
-      text: "The clinical team at Proactive helped me recover from my ACL injury faster than I ever expected. Their evidence-based approach is truly professional and transformative.",
+      name: "Rajesh Kumar",
+      role: "State-Level Athlete",
+      text: "The clinical team at Proactive helped me recover from a severe shoulder injury faster than I ever expected. Their custom athletic rehab exercises are truly top-class and game-ready.",
       rating: 5,
-      image: "https://i.pravatar.cc/150?u=sarah"
     },
     {
-      name: "Michael Chen",
-      role: "Software Engineer",
-      text: "Years of chronic back pain were resolved in just a few sessions. The manual therapy techniques they use are state-of-the-art. I can finally work pain-free again.",
+      name: "Amit Sharma",
+      role: "Senior Software Engineer",
+      text: "Years of chronic neck and lower back stiffness from desk work were resolved in just 3-4 sessions. The targeted manual therapy techniques they use are state-of-the-art.",
       rating: 5,
-      image: "https://i.pravatar.cc/150?u=michael"
     },
     {
-      name: "Emma Williams",
-      role: "Wellness Consultant",
-      text: "The specialized care I received for women's health was exceptional. They combine empathy with clinical precision in a way that is rare to find. Highly recommend!",
+      name: "Priya Patel",
+      role: "Yoga & Wellness Coach",
+      text: "The specialized care I received for post-pregnancy recovery and alignment was exceptional. They combine empathy with clinical precision in a way that is rare to find. Highly recommended!",
       rating: 5,
-      image: "https://i.pravatar.cc/150?u=emma"
     },
   ];
 
@@ -96,11 +93,6 @@ export default function Testimonials() {
 
               {/* Reviewer Info */}
               <div className="flex items-center gap-5 border-t border-slate-50 pt-8">
-                <img 
-                  src={review.image} 
-                  alt={review.name}
-                  className="w-14 h-14 rounded-2xl object-cover shadow-lg border-2 border-white"
-                />
                 <div>
                   <h4 className="font-['Poppins'] font-bold text-[#0F172A] text-lg">{review.name}</h4>
                   <p className="text-sm text-[#DC2626] font-bold uppercase tracking-wider">{review.role}</p>
@@ -119,18 +111,8 @@ export default function Testimonials() {
           className="mt-20 text-center"
         >
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#F8FAFC] border border-slate-100">
-            <div className="flex -space-x-2">
-              {[1, 2, 3, 4].map((i) => (
-                <img 
-                  key={i} 
-                  src={`https://i.pravatar.cc/100?u=${i}`} 
-                  className="w-8 h-8 rounded-full border-2 border-white"
-                  alt="Avatar"
-                />
-              ))}
-            </div>
             <p className="text-sm font-bold text-slate-600 ml-2">
-              Join <span className="text-[#DC2626]">2,500+</span> happy patients
+              Trusted by <span className="text-[#DC2626]">2,500+</span> happy patients in Raipur
             </p>
           </div>
         </motion.div>

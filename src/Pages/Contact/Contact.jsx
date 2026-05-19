@@ -15,7 +15,7 @@ const ease = [0.22, 1, 0.36, 1];
 const PHONE_1 = "8085354646";
 const PHONE_2 = "9893092426";
 const WA_NUMBER = "918085354646"; // WhatsApp — 91 + number (no spaces)
-const INSTAGRAM  = "https://www.instagram.com/proactivephysiotherapy";
+const INSTAGRAM  = "https://www.instagram.com/proactive_physiotherapy/?hl=en";
 const ADDRESS    = "LIG-68, Aashirwad, Sector-2, Shankar Nagar, Raipur, Chhattisgarh";
 
 export default function Contact() {
