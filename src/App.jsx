@@ -17,6 +17,8 @@ import Contact from "./Pages/Contact/Contact";
 import Appointment from "./Pages/Appointment/Appointment";
 import Mission from "./Pages/Mission/Mission";
 import Footer from "./Pages/Footer/Footer";
+import FloatingActions from "./Pages/FloatingActions";
+import ScrollToTopButton from "./Pages/ScrollToTopButton";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -68,6 +70,8 @@ export default function App() {
         <Route path="/services/ndis" element={<NDIS />} />
       </Routes>
       <Footer />
+      <FloatingActions />
+      <ScrollToTopButton />
     </Router>
   );
 }

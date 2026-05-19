@@ -2,89 +2,88 @@ import { Link } from "react-router-dom";
 import {
   ArrowRight,
   Phone,
-  Mail,
   MapPin,
-  Heart
+  Heart,
+  Clock,
 } from "lucide-react";
+import { FaInstagram, FaWhatsapp, FaFacebookF } from "react-icons/fa";
 
-import {
-  FaInstagram,
-  FaFacebookF,
-  FaLinkedinIn,
-  FaTwitter
-} from "react-icons/fa";
+// ── Real clinic data ─────────────────────────────────────────────
+const WA_NUMBER  = "918085354646";
+const INSTAGRAM  = "https://www.instagram.com/proactivephysiotherapy";
+const ADDRESS    = "LIG-68, Aashirwad, Sector-2, Shankar Nagar, Raipur, Chhattisgarh";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0F172A] pt-20 pb-10 text-white font-['Inter'] overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-20 mb-20">
+    <footer className="bg-[#0F172A] pt-20 pb-10 text-white font-['Inter'] overflow-hidden relative">
 
-          {/* Brand Info */}
-          <div className="space-y-8">
+      {/* Subtle background glow */}
+      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#C1121F]/5 blur-[120px] rounded-full pointer-events-none" />
+
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
+
+          {/* ── Brand ── */}
+          <div className="space-y-6 lg:col-span-1">
             <Link to="/" className="inline-block">
               <h3 className="font-['Poppins'] text-2xl font-bold tracking-tight">
                 PRO ACTIVE <span className="text-[#C1121F]">PHYSIO</span>
               </h3>
             </Link>
 
-            <p className="text-slate-400 text-base leading-relaxed font-medium">
-              Elite physiotherapy and clinical rehabilitation services dedicated
+            <p className="text-slate-400 text-sm leading-relaxed">
+              Elite physiotherapy & clinical rehabilitation services dedicated
               to restoring your movement and optimizing performance.
             </p>
 
-            {/* ✅ SOCIAL ICONS FIXED */}
-            <div className="flex gap-4">
+            {/* Social icons */}
+            <div className="flex gap-3">
+              {/* WhatsApp */}
               <a
-                href="#"
-                className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-pink-500 hover:border-pink-500 transition-all transform hover:-translate-y-1"
+                href={`https://wa.me/${WA_NUMBER}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Chat on WhatsApp"
+                className="group w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#25D366] hover:border-[#25D366] transition-all duration-300 hover:-translate-y-1"
               >
-                <FaInstagram size={16} />
+                <FaWhatsapp size={17} />
               </a>
 
+              {/* Instagram */}
               <a
-                href="#"
-                className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all transform hover:-translate-y-1"
+                href={INSTAGRAM}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Follow on Instagram"
+                className="group w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gradient-to-br hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF] hover:border-transparent transition-all duration-300 hover:-translate-y-1"
+                style={{}}
               >
-                <FaFacebookF size={16} />
+                <FaInstagram size={17} />
               </a>
 
-              <a
-                href="#"
-                className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-500 hover:border-blue-500 transition-all transform hover:-translate-y-1"
-              >
-                <FaLinkedinIn size={16} />
-              </a>
-
-              <a
-                href="#"
-                className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-sky-500 hover:border-sky-500 transition-all transform hover:-translate-y-1"
-              >
-                <FaTwitter size={16} />
-              </a>
+              
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* ── Quick Links ── */}
           <div>
-            <h4 className="font-['Poppins'] text-lg font-bold mb-8">
+            <h4 className="font-['Poppins'] text-base font-bold mb-6 text-white">
               Quick Links
             </h4>
-
-            <ul className="space-y-4">
+            <ul className="space-y-3">
               {[
-                { name: "About Us", path: "/about" },
-                { name: "Our Services", path: "/services" },
-                { name: "Success Stories", path: "/#testimonials" },
-                { name: "Contact Team", path: "/contact" },
-                { name: "Book Now", path: "/appointment" }
+                { name: "About Us",       path: "/about" },
+                { name: "Our Services",   path: "/services" },
+                { name: "Success Stories",path: "/#testimonials" },
+                { name: "Contact Team",   path: "/contact" },
+                { name: "Book Now",       path: "/appointment" },
               ].map((link, i) => (
                 <li key={i}>
                   <Link
                     to={link.path}
-                    className="text-slate-400 hover:text-[#C1121F] transition-colors inline-flex items-center gap-2 group"
+                    className="text-slate-400 hover:text-[#C1121F] transition-colors inline-flex items-center gap-2 group text-sm"
                   >
-                    <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
+                    <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
                     {link.name}
                   </Link>
                 </li>
@@ -92,98 +91,166 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Details */}
+          {/* ── Contact Info ── */}
           <div>
-            <h4 className="font-['Poppins'] text-lg font-bold mb-8">
+            <h4 className="font-['Poppins'] text-base font-bold mb-6 text-white">
               Contact Info
             </h4>
+            <ul className="space-y-5">
 
-            <ul className="space-y-6">
-              <li className="flex gap-4">
-                <div className="icon-box">
-                  <Phone className="w-5 h-5" />
+              {/* Phone */}
+              <li className="flex gap-3 items-start">
+                <div className="w-9 h-9 shrink-0 rounded-xl bg-[#C1121F]/10 text-[#C1121F] flex items-center justify-center">
+                  <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <p className="label">Phone</p>
-                  <p className="value">+91 12345 67890</p>
+                  <p className="text-[10px] font-semibold text-slate-500 uppercase tracking-widest mb-1">Phone</p>
+                  <a href="tel:+918085354646" className="text-slate-300 hover:text-white transition text-sm block">
+                    +91 80853 54646
+                  </a>
+                  <a href="tel:+919893092426" className="text-slate-300 hover:text-white transition text-sm block">
+                    +91 98930 92426
+                  </a>
                 </div>
               </li>
 
-              <li className="flex gap-4">
-                <div className="icon-box">
-                  <Mail className="w-5 h-5" />
+              {/* WhatsApp */}
+              <li className="flex gap-3 items-start">
+                <div className="w-9 h-9 shrink-0 rounded-xl bg-[#25D366]/10 text-[#25D366] flex items-center justify-center">
+                  <FaWhatsapp size={16} />
                 </div>
                 <div>
-                  <p className="label">Email</p>
-                  <p className="value">
-                    care@proactivephysio.com
-                  </p>
+                  <p className="text-[10px] font-semibold text-slate-500 uppercase tracking-widest mb-1">WhatsApp</p>
+                  <a
+                    href={`https://wa.me/${WA_NUMBER}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-300 hover:text-[#25D366] transition text-sm"
+                  >
+                    +91 80853 54646
+                  </a>
                 </div>
               </li>
 
-              <li className="flex gap-4">
-                <div className="icon-box">
-                  <MapPin className="w-5 h-5" />
+              {/* Address */}
+              <li className="flex gap-3 items-start">
+                <div className="w-9 h-9 shrink-0 rounded-xl bg-[#C1121F]/10 text-[#C1121F] flex items-center justify-center">
+                  <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <p className="label">Clinic</p>
-                  <p className="value">
-                    123 Health Avenue, Medical Square
-                  </p>
+                  <p className="text-[10px] font-semibold text-slate-500 uppercase tracking-widest mb-1">Clinic</p>
+                  <a
+                    href={`https://maps.google.com/?q=${encodeURIComponent(ADDRESS)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-300 hover:text-white transition text-sm leading-relaxed"
+                  >
+                    LIG-68, Aashirwad, Sector-2,<br />
+                    Shankar Nagar, Raipur,<br />
+                    Chhattisgarh
+                  </a>
                 </div>
               </li>
+
             </ul>
           </div>
 
-          {/* Operating Hours */}
+          {/* ── Hours ── */}
           <div>
-            <h4 className="font-['Poppins'] text-lg font-bold mb-8">
+            <h4 className="font-['Poppins'] text-base font-bold mb-6 text-white">
               Operating Hours
             </h4>
 
-            <div className="space-y-4 p-6 rounded-3xl bg-white/5 border border-white/10 text-sm">
-              <div className="flex justify-between">
-                <span className="text-slate-400">Mon - Fri</span>
-                <span className="font-bold text-slate-200">8AM - 8PM</span>
+            <div className="space-y-4 p-5 rounded-3xl bg-white/5 border border-white/10 text-sm">
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center gap-2 text-slate-400">
+                  <Clock className="w-3.5 h-3.5 text-[#C1121F]" />
+                  Mon – Fri
+                </div>
+                <span className="font-bold text-slate-200 text-xs">8AM – 8PM</span>
+              </div>
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center gap-2 text-slate-400">
+                  <Clock className="w-3.5 h-3.5 text-[#C1121F]" />
+                  Saturday
+                </div>
+                <span className="font-bold text-slate-200 text-xs">9AM – 6PM</span>
+              </div>
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center gap-2 text-slate-400">
+                  <Clock className="w-3.5 h-3.5 text-[#C1121F]" />
+                  Sunday
+                </div>
+                <span className="font-bold text-[#C1121F] text-xs">Emergency Only</span>
               </div>
 
-              <div className="flex justify-between">
-                <span className="text-slate-400">Saturday</span>
-                <span className="font-bold text-slate-200">9AM - 6PM</span>
-              </div>
-
-              <div className="flex justify-between">
-                <span className="text-slate-400">Sunday</span>
-                <span className="font-bold text-[#C1121F]">
-                  Emergency Only
-                </span>
+              {/* Quick CTA */}
+              <div className="pt-4 border-t border-white/10">
+                <a
+                  href={`https://wa.me/${WA_NUMBER}?text=Hi%2C%20I%20want%20to%20book%20an%20appointment.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-[#25D366] hover:bg-[#1ebe5d] text-white font-['Poppins'] font-semibold text-xs transition-colors"
+                >
+                  <FaWhatsapp size={14} />
+                  Book via WhatsApp
+                </a>
               </div>
             </div>
           </div>
 
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-slate-500">
-          <p>
-            © {new Date().getFullYear()} PRO ACTIVE PHYSIO. All rights reserved.
-          </p>
+        {/* ── Bottom Bar ── */}
+        <div className="pt-8 mt-10 border-t border-white/10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-5 text-slate-500">
+            {/* Left Side */}
+            <div className="text-center md:text-left">
+              <p className="text-sm tracking-wide">
+                © {new Date().getFullYear()}{" "}
+                <span className="text-white font-semibold">
+                  PRO ACTIVE PHYSIO
+                </span>
+                . All rights reserved.
+              </p>
+              <p className="text-xs mt-1">
+                Designed for better care & modern physiotherapy experience.
+              </p>
+            </div>
 
-          <div className="flex gap-6">
-            <Link to="/privacy" className="hover:text-white transition-colors">
-              Privacy Policy
-            </Link>
-            <Link to="/terms" className="hover:text-white transition-colors">
-              Terms of Service
-            </Link>
+            {/* Right Side */}
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
+              <Link
+                to="/privacy"
+                className="hover:text-white transition-all duration-300 hover:scale-105"
+              >
+                Privacy Policy
+              </Link>
+              <span className="text-white/10">•</span>
+              <Link
+                to="/terms"
+                className="hover:text-white transition-all duration-300 hover:scale-105"
+              >
+                Terms of Service
+              </Link>
+              <span className="hidden md:block text-white/10">|</span>
+              <a
+                href="https://spadvertising.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-full transition-all duration-300"
+              >
+                <span className="text-slate-400 text-xs uppercase tracking-wider">
+                  Made by
+                </span>
+                <span className="font-semibold text-slate-200 group-hover:text-[#C1121F] transition-colors duration-300">
+                  SP Advertising
+                </span>
+              </a>
+            </div>
           </div>
-
-          <p className="flex items-center gap-1.5">
-            Designed with
-            <Heart className="w-3.5 h-3.5 text-[#C1121F] fill-[#C1121F]" />
-            for your health.
-          </p>
         </div>
+
       </div>
     </footer>
   );
