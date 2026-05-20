@@ -1,124 +1,133 @@
 import { motion } from "framer-motion";
-import { Target, Eye, ArrowRight } from "lucide-react";
+import { Target, Eye, ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function MissionVision() {
   return (
-    <section className="relative py-32 bg-gradient-to-br from-[#0F172A] via-[#111827] to-[#0F172A] overflow-hidden">
+    <section className="relative py-28 bg-gradient-to-br from-white via-[#FFF8F6] to-[#FFFDF7] overflow-hidden">
 
-      {/* Animated Floating Glow Orbs */}
-      <div className="absolute top-[-100px] left-[-100px] w-[500px] h-[500px] bg-[#DC2626]/10 blur-[140px] rounded-full animate-pulse"></div>
-      <div className="absolute bottom-[-120px] right-[-120px] w-[500px] h-[500px] bg-[#DC2626]/10 blur-[140px] rounded-full animate-pulse"></div>
-
-      {/* Floating Particles */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="w-2 h-2 bg-[#DC2626] rounded-full absolute top-1/4 left-1/3 animate-bounce"></div>
-        <div className="w-1.5 h-1.5 bg-white rounded-full absolute top-1/2 left-2/3 animate-ping"></div>
-        <div className="w-2 h-2 bg-[#DC2626]/80 rounded-full absolute bottom-1/4 left-1/4 animate-bounce"></div>
-      </div>
+      {/* Soft Background Glow */}
+      <div className="absolute -top-32 -left-32 w-[400px] h-[400px] bg-[#C1121F]/10 rounded-full blur-[120px]" />
+      <div className="absolute -bottom-32 -right-32 w-[400px] h-[400px] bg-[#D4AF37]/10 rounded-full blur-[120px]" />
 
       <div className="relative max-w-7xl mx-auto px-6">
 
-        {/* Header - Centered */}
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="max-w-4xl mb-24 text-center mx-auto"
+          className="text-center max-w-3xl mx-auto mb-20"
         >
-          <p className="text-[#DC2626] font-['Poppins'] text-sm font-semibold tracking-[2px] uppercase mb-4">
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full 
+                          bg-[#C1121F]/5 border border-[#D4AF37]/30 
+                          text-[#C1121F] text-xs tracking-widest uppercase mb-8">
+            <Sparkles className="w-4 h-4 text-[#D4AF37]" />
             Our Purpose
-          </p>
+          </div>
 
-          <h2 className="text-white font-['Poppins'] text-4xl md:text-6xl font-bold leading-tight tracking-[-1px] mb-6">
-            Driven By Care, <br />
-            Focused On <span className="text-[#DC2626]">Recovery.</span>
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900 mb-6">
+            Driven By{" "}
+            <span className="text-[#C1121F]">Care</span>, Focused On{" "}
+            <span className="text-[#D4AF37]">Recovery</span>.
           </h2>
 
-          <p className="text-[#CBD5E1] font-['Inter'] text-[18px] leading-8 max-w-2xl mx-auto">
-            We blend compassion with innovation to help patients regain
-            mobility, strength, and confidence for a healthier tomorrow.
+          <p className="text-gray-600 text-lg leading-relaxed">
+            We combine compassion with clinical expertise to deliver
+            personalised physiotherapy focused on restoring strength,
+            mobility and confidence.
           </p>
         </motion.div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-2 gap-14">
+        <div className="grid md:grid-cols-2 gap-10 lg:gap-14">
 
           {/* Mission Card */}
           <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            whileHover={{ y: -8 }}
-            className="relative group"
+            className="group"
           >
-            <div className="absolute inset-0 rounded-[30px] bg-gradient-to-br from-[#DC2626]/20 to-red-500/10 opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
+            <div className="bg-white border border-[#D4AF37]/20 rounded-3xl p-10
+                            shadow-[0_10px_40px_-15px_rgba(0,0,0,0.08)]
+                            hover:shadow-[0_20px_60px_-20px_rgba(193,18,31,0.25)]
+                            hover:-translate-y-2 transition-all duration-500">
 
-            <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-[28px] p-10 shadow-[0_10px_40px_rgba(0,0,0,0.25)] transition-all duration-500 group-hover:border-[#DC2626]/40">
-
-              <div className="w-[70px] h-[70px] bg-[#DC2626]/10 text-[#DC2626] rounded-[20px] flex items-center justify-center mb-8 group-hover:scale-110 transition">
-                <Target className="w-8 h-8" />
+              <div className="w-14 h-14 rounded-xl 
+                              bg-gradient-to-br from-[#C1121F] to-[#D4AF37]
+                              flex items-center justify-center mb-6 shadow-md">
+                <Target className="w-6 h-6 text-white" />
               </div>
 
-              <h3 className="text-white font-['Poppins'] text-[28px] font-semibold leading-[38px] mb-4">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                 Our Mission
               </h3>
 
-              <p className="text-[#CBD5E1] font-['Inter'] text-[15px] leading-[30px]">
-                Our mission is to provide advanced, personalized, and
-                compassionate physiotherapy care that helps patients recover
-                faster, reduce pain, improve mobility, and regain confidence in
-                their everyday lives through modern rehabilitation techniques
-                and expert guidance.
+              <p className="text-gray-600 leading-relaxed">
+                To provide advanced and personalised physiotherapy care
+                designed to accelerate recovery, reduce pain and empower
+                individuals to regain confidence in everyday life.
               </p>
             </div>
           </motion.div>
 
           {/* Vision Card */}
           <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            whileHover={{ y: -8 }}
-            className="relative group"
+            className="group"
           >
-            <div className="absolute inset-0 rounded-[30px] bg-gradient-to-br from-[#DC2626]/20 to-red-500/10 opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
+            <div className="bg-white border border-[#D4AF37]/20 rounded-3xl p-10
+                            shadow-[0_10px_40px_-15px_rgba(0,0,0,0.08)]
+                            hover:shadow-[0_20px_60px_-20px_rgba(212,175,55,0.35)]
+                            hover:-translate-y-2 transition-all duration-500">
 
-            <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-[28px] p-10 shadow-[0_10px_40px_rgba(0,0,0,0.25)] transition-all duration-500 group-hover:border-[#DC2626]/40">
-
-              <div className="w-[70px] h-[70px] bg-[#DC2626]/10 text-[#DC2626] rounded-[20px] flex items-center justify-center mb-8 group-hover:scale-110 transition">
-                <Eye className="w-8 h-8" />
+              <div className="w-14 h-14 rounded-xl 
+                              bg-gradient-to-br from-[#D4AF37] to-[#C1121F]
+                              flex items-center justify-center mb-6 shadow-md">
+                <Eye className="w-6 h-6 text-white" />
               </div>
 
-              <h3 className="text-white font-['Poppins'] text-[28px] font-semibold leading-[38px] mb-4">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                 Our Vision
               </h3>
 
-              <p className="text-[#CBD5E1] font-['Inter'] text-[15px] leading-[30px]">
-                Our vision is to become a trusted and leading physiotherapy
-                center known for delivering exceptional patient care,
-                innovative therapy solutions, and long-term wellness focused on
-                healthier and pain-free living.
+              <p className="text-gray-600 leading-relaxed">
+                To become a trusted leader in physiotherapy known for
+                excellence, innovation and long‑term wellness solutions
+                built on care and commitment.
               </p>
             </div>
           </motion.div>
 
         </div>
 
-        {/* Premium Animated Button */}
-        <div className="mt-24 text-center">
-          <motion.button
-            whileHover={{ scale: 1.07 }}
-            whileTap={{ scale: 0.96 }}
-            className="relative overflow-hidden bg-gradient-to-r from-[#C1121F] to-[#DC2626] text-white font-['Poppins'] text-base font-semibold px-10 py-4 rounded-xl inline-flex items-center gap-3 shadow-lg"
+        {/* CTA Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="mt-20 text-center"
+        >
+          <Link
+            to="/book"
+            className="inline-flex items-center gap-3 px-10 py-4 rounded-full
+                       bg-[#C1121F] text-white text-sm font-medium
+                       shadow-lg hover:bg-[#a50f1a]
+                       transition-all duration-300"
           >
-            <span className="absolute inset-0 bg-white/10 opacity-0 hover:opacity-100 transition"></span>
             Book Appointment
-            <ArrowRight className="w-5 h-5" />
-          </motion.button>
-        </div>
+            <span className="bg-white/20 p-2 rounded-full">
+              <ArrowRight className="w-4 h-4 text-white" />
+            </span>
+          </Link>
+        </motion.div>
 
       </div>
     </section>

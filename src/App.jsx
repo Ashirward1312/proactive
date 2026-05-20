@@ -21,6 +21,8 @@ import FloatingActions from "./Pages/FloatingActions";
 import ScrollToTopButton from "./Pages/ScrollToTopButton";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import Faq from "./Pages/Faq/Faq";
+import WhyChoose from "./Pages/WhyChooseUs/WhyChooseUs";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -41,10 +43,13 @@ function HomePage() {
     <>
       <HeroSection />
       {/* Services removed from Home as per request */}
+      <WhyChoose />
+
       <Process />
       <Mission />
 
       <Testimonials />
+      <Faq />
     </>
   );
 }
@@ -59,15 +64,15 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/appointment" element={<Appointment />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/services/sports-rehab" element={<SportsRehab />} />
-        <Route path="/services/back-neck-pain" element={<BackNeckPain />} />
-        <Route path="/services/post-rehab" element={<PostRehab />} />
-        <Route path="/services/workplaces" element={<Workplaces />} />
-        <Route path="/services/manual-therapy" element={<ManualTherapy />} />
-        <Route path="/services/exercise-physiology" element={<ExercisePhysiology />} />
-        <Route path="/services/women-health" element={<WomenHealth />} />
-        <Route path="/services/ndis" element={<NDIS />} />
+        <Route path="/treatment" element={<Services />} />
+        <Route path="/treatment/sports-rehab" element={<SportsRehab />} />
+        <Route path="/treatment/back-neck-pain" element={<BackNeckPain />} />
+        <Route path="/treatment/post-rehab" element={<PostRehab />} />
+        <Route path="/treatment/workplaces" element={<Workplaces />} />
+        <Route path="/treatment/manual-therapy" element={<ManualTherapy />} />
+        <Route path="/treatment/exercise-physiology" element={<ExercisePhysiology />} />
+        <Route path="/treatment/women-health" element={<WomenHealth />} />
+        <Route path="/treatment/ndis" element={<NDIS />} />
       </Routes>
       <Footer />
       <FloatingActions />

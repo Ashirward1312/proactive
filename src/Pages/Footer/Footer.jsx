@@ -73,7 +73,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { name: "About Us",       path: "/about" },
-                { name: "Our Services",   path: "/services" },
+                { name: "Our Treatments", path: "/treatment" },
                 { name: "Success Stories",path: "/#testimonials" },
                 { name: "Contact Team",   path: "/contact" },
                 { name: "Book Now",       path: "/appointment" },

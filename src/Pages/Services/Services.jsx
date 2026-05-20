@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
-  Zap, 
-  Activity, 
-  ClipboardCheck, 
-  Briefcase, 
-  Hand, 
-  Dumbbell, 
-  Heart, 
-  Accessibility 
+import {
+  ArrowRight,
+  Zap,
+  Activity,
+  ClipboardCheck,
+  Briefcase,
+  Hand,
+  Dumbbell,
+  Heart,
+  Accessibility
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -16,144 +16,142 @@ export default function Services() {
   const services = [
     {
       title: "Sports Injury Rehab",
-      path: "/services/sports-rehab",
+      path: "/treatment/sports-rehab",
       desc: "Return to sport stronger & safer with our elite programs.",
-      icon: <Zap className="w-7 h-7" />,
-      color: "text-[#C1121F]"
+      icon: <Zap className="w-6 h-6 text-white" />,
+      gradient: "from-rose-500 to-red-500",
+      shadow: "hover:shadow-rose-500/20",
     },
     {
       title: "Back & Neck Pain",
-      path: "/services/back-neck-pain",
+      path: "/treatment/back-neck-pain",
       desc: "Expert treatment to relieve pain & improve mobility.",
-      icon: <Activity className="w-7 h-7" />,
-      color: "text-[#FACC15]"
+      icon: <Activity className="w-6 h-6 text-white" />,
+      gradient: "from-amber-400 to-orange-500",
+      shadow: "hover:shadow-orange-500/20",
     },
     {
       title: "Post-Surgery Rehab",
-      path: "/services/post-rehab",
+      path: "/treatment/post-rehab",
       desc: "Recover faster with expert care following your procedure.",
-      icon: <ClipboardCheck className="w-7 h-7" />,
-      color: "text-blue-600"
+      icon: <ClipboardCheck className="w-6 h-6 text-white" />,
+      gradient: "from-blue-500 to-cyan-500",
+      shadow: "hover:shadow-blue-500/20",
     },
     {
       title: "Workplace Injuries",
-      path: "/services/workplaces",
+      path: "/treatment/workplaces",
       desc: "Support for recovery & getting you back to work safely.",
-      icon: <Briefcase className="w-7 h-7" />,
-      color: "text-emerald-600"
+      icon: <Briefcase className="w-6 h-6 text-white" />,
+      gradient: "from-emerald-400 to-teal-500",
+      shadow: "hover:shadow-emerald-500/20",
     },
     {
       title: "Manual Therapy",
-      path: "/services/manual-therapy",
+      path: "/treatment/manual-therapy",
       desc: "Hands-on treatment for fast & effective pain relief.",
-      icon: <Hand className="w-7 h-7" />,
-      color: "text-[#C1121F]"
+      icon: <Hand className="w-6 h-6 text-white" />,
+      gradient: "from-fuchsia-500 to-purple-600",
+      shadow: "hover:shadow-fuchsia-500/20",
     },
     {
       title: "Exercise Physiology",
-      path: "/services/exercise-physiology",
+      path: "/treatment/exercise-physiology",
       desc: "Individualised exercise programs tailored to your goals.",
-      icon: <Dumbbell className="w-7 h-7" />,
-      color: "text-[#FACC15]"
+      icon: <Dumbbell className="w-6 h-6 text-white" />,
+      gradient: "from-violet-500 to-indigo-600",
+      shadow: "hover:shadow-indigo-500/20",
     },
     {
       title: "Women's Health",
-      path: "/services/women-health",
+      path: "/treatment/women-health",
       desc: "Pelvic health, pregnancy & postnatal physiotherapy care.",
-      icon: <Heart className="w-7 h-7" />,
-      color: "text-[#C1121F]"
+      icon: <Heart className="w-6 h-6 text-white" />,
+      gradient: "from-pink-400 to-rose-500",
+      shadow: "hover:shadow-pink-500/20",
     },
     {
       title: "NDIS Physio",
-      path: "/services/ndis",
+      path: "/treatment/ndis",
       desc: "Personalised supports to improve function & independence.",
-      icon: <Accessibility className="w-7 h-7" />,
-      color: "text-blue-600"
+      icon: <Accessibility className="w-6 h-6 text-white" />,
+      gradient: "from-sky-400 to-blue-600",
+      shadow: "hover:shadow-sky-500/20",
     },
   ];
 
   return (
-    <section id="services" className="pt-32 lg:pt-48 pb-20 lg:pb-32 bg-[#F8FAFC] font-['Inter'] overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 relative">
-        
-        {/* Subtle Background Elements */}
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#C1121F]/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#FACC15]/5 rounded-full blur-3xl pointer-events-none" />
+    <section className="relative pt-28 pb-24 bg-gray-50 font-['Inter'] overflow-hidden">
+      {/* Background Colorful Blobs */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div className="absolute top-[20%] right-[-10%] w-96 h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div className="absolute bottom-[-20%] left-[20%] w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+      </div>
 
+      <div className="relative max-w-7xl mx-auto px-6 z-10">
         {/* Header */}
-        <motion.div 
-          initial={{ opacity: 0, y: 16 }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="text-center max-w-3xl mx-auto mb-14 lg:mb-18"
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-2xl mx-auto mb-20"
         >
-          <span className="text-[#C1121F] font-['Poppins'] font-bold text-xs uppercase tracking-[0.25em] mb-4 block">
-            Specialized Care
+          <span className="inline-block py-1.5 px-4 rounded-full bg-red-50 text-[#C1121F] text-xs uppercase tracking-widest font-bold mb-5 border border-red-100 shadow-sm">
+            Our Services
           </span>
-
-          <h2 className="font-['Poppins'] text-3xl sm:text-4xl md:text-5xl font-bold text-[#0F172A] leading-tight">
-            Our Elite <span className="text-[#C1121F]">Physiotherapy</span> Services
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
+            Advanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C1121F] to-orange-500">Physiotherapy</span> Treatments
           </h2>
-
-          <p className="mt-5 text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-medium">
-            Clinical excellence meets compassionate care. We provide a comprehensive range of specialized treatments to restore your vitality and performance.
+          <p className="mt-6 text-gray-600 text-lg leading-relaxed">
+            Professional, evidence-based care designed to restore mobility,
+            reduce pain and improve your overall quality of life.
           </p>
-          <div className="mt-6 w-20 h-1.5 bg-[#FACC15] mx-auto rounded-full" />
         </motion.div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="h-full"
             >
               <Link
                 to={service.path}
-                className="group relative h-full flex flex-col rounded-[2rem] border border-slate-200/70 bg-white p-7 sm:p-8 shadow-[0_12px_30px_-20px_rgba(15,23,42,0.35)]
-                           hover:shadow-[0_32px_80px_-40px_rgba(193,18,31,0.45)]
-                           hover:-translate-y-2 transition-all duration-500 outline-none
-                           focus-visible:ring-2 focus-visible:ring-[#C1121F]/30 overflow-hidden"
+                className={`group relative flex flex-col bg-white/80 backdrop-blur-md rounded-3xl p-8 
+                           border border-white/50 shadow-sm hover:shadow-2xl 
+                           hover:-translate-y-2 transition-all duration-300 ${service.shadow} h-full z-10 overflow-hidden`}
               >
-                {/* Premium hover wash */}
-                <div className="pointer-events-none absolute inset-0 rounded-[2rem] bg-gradient-to-br from-[#C1121F]/8 via-transparent to-[#FACC15]/12 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                {/* Decorative background glow on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-300`}></div>
+                
+                {/* Icon */}
+                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.gradient} shadow-lg flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-300`}>
+                  {service.icon}
+                </div>
 
-                <div className="relative z-10 flex flex-col h-full">
-                  {/* Top row: icon + arrow */}
-                  <div className="flex items-start justify-between gap-4 mb-6">
-                    <div className={`w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 ${service.color}
-                                    flex items-center justify-center
-                                    group-hover:bg-slate-900 group-hover:text-white group-hover:border-slate-900
-                                    transition-all duration-500 shadow-sm`}
-                    >
-                      {service.icon}
-                    </div>
+                {/* Title */}
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors">
+                  {service.title}
+                </h3>
 
-                    <div className="w-10 h-10 rounded-2xl border border-slate-200/70 bg-white flex items-center justify-center
-                                    group-hover:border-[#C1121F]/25 group-hover:bg-[#C1121F]/5 transition-colors duration-300">
-                      <ArrowRight className="w-5 h-5 text-slate-700 group-hover:text-[#C1121F] group-hover:translate-x-1 transition-all" />
-                    </div>
-                  </div>
+                {/* Description */}
+                <p className="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
+                  {service.desc}
+                </p>
 
-                  {/* Title */}
-                  <h3 className="font-['Poppins'] text-xl sm:text-[22px] font-bold text-[#0F172A] leading-tight mb-3">
-                    {service.title}
-                  </h3>
-
-                  {/* Desc */}
-                  <p className="text-sm text-slate-600 leading-relaxed font-medium mb-8">
-                    {service.desc}
-                  </p>
-
-                  {/* Bottom link */}
-                  <div className="mt-auto inline-flex items-center gap-2 text-[11px] font-['Poppins'] font-extrabold uppercase tracking-[0.18em] text-slate-900 group-hover:text-[#C1121F] transition-colors">
-                    Explore Service
-                    <span className="w-8 h-[2px] bg-slate-200 group-hover:bg-[#C1121F]/40 rounded-full transition-colors" />
-                  </div>
+                {/* Link */}
+                <div className="mt-auto flex items-center text-sm font-bold text-gray-900 group-hover:text-[#C1121F] transition-colors">
+                  <span className="relative">
+                    Learn More
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#C1121F] transition-all duration-300 group-hover:w-full"></span>
+                  </span>
+                  <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" />
                 </div>
               </Link>
             </motion.div>
@@ -161,21 +159,27 @@ export default function Services() {
         </div>
 
         {/* Bottom CTA */}
-        <motion.div 
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="mt-14 lg:mt-18 text-center"
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-24 text-center"
         >
-          <Link
-            to="/book"
-            className="inline-flex items-center justify-center gap-3 text-white px-10 py-5 rounded-2xl font-['Poppins'] font-bold text-sm sm:text-base
-                       shadow-2xl shadow-[#C1121F]/30 hover:shadow-3xl hover:shadow-[#C1121F]/40 transition hover:scale-[1.03] active:scale-95
-                       bg-[#C1121F] hover:bg-[#DC2626]"
-          >
-            Start Your Recovery Journey <ArrowRight className="w-5 h-5" />
-          </Link>
+          <div className="relative inline-block group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-[#C1121F] to-orange-500 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+            <Link
+              to="/book"
+              className="relative inline-flex items-center gap-3 bg-gradient-to-r from-[#C1121F] to-red-700 text-white
+                         px-10 py-5 rounded-2xl text-base font-bold shadow-xl
+                         hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+            >
+              Book Appointment
+              <div className="bg-white/20 p-1.5 rounded-full">
+                <ArrowRight className="w-5 h-5" />
+              </div>
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>
