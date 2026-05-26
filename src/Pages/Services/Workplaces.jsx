@@ -11,8 +11,8 @@ import {
   Search,
   FileText
 } from "lucide-react";
-import WorkImg1 from "../img/workplaces.jpeg";
-import WorkImg2 from "../img/workplaces2.jpeg";
+import WorkImg1 from "../img/workplaces.webp";
+import WorkImg2 from "../img/workplaces2.webp";
 import BackButton from "./BackButton";
 
 const ease = [0.22, 1, 0.36, 1];

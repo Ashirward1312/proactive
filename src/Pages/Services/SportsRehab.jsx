@@ -10,8 +10,8 @@ import {
   Search,
   FileText,
 } from "lucide-react";
-import RehabImg1 from "../img/rehab.jpeg";
-import RehabImg2 from "../img/rehab2.jpeg";
+import RehabImg1 from "../img/rehab.webp";
+import RehabImg2 from "../img/rehab2.webp";
 import BackButton from "./BackButton";
 
 const ease = [0.22, 1, 0.36, 1];

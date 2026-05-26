@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { UserCheck, HeartPulse, Activity, Zap, ArrowRight } from "lucide-react";
-import AboutImg from "../img/h2.jpg"
+import AboutImg from "../img/h2.webp"
 
 export default function About() {
   return (

@@ -11,8 +11,8 @@ import {
   Search,
   FileText
 } from "lucide-react";
-import NdisImg1 from "../img/ndis.jpeg";
-import NdisImg2 from "../img/ndis2.jpeg";
+import NdisImg1 from "../img/ndis.webp";
+import NdisImg2 from "../img/ndis2.webp";
 import BackButton from "./BackButton";
 
 const ease = [0.22, 1, 0.36, 1];

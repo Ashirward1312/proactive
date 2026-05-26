@@ -11,8 +11,8 @@ import {
   FileText,
   UserCheck
 } from "lucide-react";
-import PostImg1 from "../img/postrehab.jpeg";
-import PostImg2 from "../img/postrehab2.jpeg";
+import PostImg1 from "../img/postrehab.webp";
+import PostImg2 from "../img/postrehab2.webp";
 import BackButton from "./BackButton";
 
 const ease = [0.22, 1, 0.36, 1];

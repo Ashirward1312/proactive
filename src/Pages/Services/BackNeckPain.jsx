@@ -9,8 +9,8 @@ import {
   FileText,
   Activity as ActivityIcon,
 } from "lucide-react";
-import Back from "../img/back.jpeg";
-import Neck from "../img/neck.jpeg";
+import Back from "../img/back.webp";
+import Neck from "../img/neck.webp";
 import BackButton from "./BackButton";
 
 const ease = [0.22, 1, 0.36, 1];

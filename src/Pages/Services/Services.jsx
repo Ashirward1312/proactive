@@ -99,7 +99,7 @@ export default function Services() {
           className="text-center max-w-2xl mx-auto mb-20"
         >
           <span className="inline-block py-1.5 px-4 rounded-full bg-red-50 text-[#C1121F] text-xs uppercase tracking-widest font-bold mb-5 border border-red-100 shadow-sm">
-            Our Services
+            Our Treatments
           </span>
           <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
             Advanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C1121F] to-orange-500">Physiotherapy</span> Treatments

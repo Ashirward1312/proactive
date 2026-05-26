@@ -11,8 +11,8 @@ import {
   FileText,
   Activity
 } from "lucide-react";
-import WomenImg1 from "../img/womenhealth.jpeg";
-import WomenImg2 from "../img/womenhealth2.jpeg";
+import WomenImg1 from "../img/womenhealth.webp";
+import WomenImg2 from "../img/womenhealth2.webp";
 import BackButton from "./BackButton";
 
 const ease = [0.22, 1, 0.36, 1];

@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Calendar, Activity } from "lucide-react";
-import mainHero from "../img/h3.jpg";
-import mainhero2 from "../img/h2.jpg";
-import mainhero3 from "../img/h4.jpg";
+import mainHero from "../img/h3.webp";
+import mainhero2 from "../img/h2.webp";
+import mainhero3 from "../img/h4.webp";
 
 export default function HeroSection() {
     const images = [mainHero, mainhero2, mainhero3];

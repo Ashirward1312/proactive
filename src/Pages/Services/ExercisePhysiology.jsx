@@ -10,8 +10,8 @@ import {
   FileText,
   Activity,
 } from "lucide-react";
-import ExerciseImg1 from "../img/excercise.jpeg";
-import ExerciseImg2 from "../img/excercise2.jpeg";
+import ExerciseImg1 from "../img/excercise.webp";
+import ExerciseImg2 from "../img/excercise2.webp";
 import BackButton from "./BackButton";
 
 const ease = [0.22, 1, 0.36, 1];
